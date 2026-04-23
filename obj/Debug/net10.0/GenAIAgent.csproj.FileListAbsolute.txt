@@ -7,8 +7,10 @@ F:\Projetos\GenAIAgent\bin\Debug\net10.0\Google.Protobuf.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Agents.AI.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Agents.AI.Abstractions.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Agents.AI.OpenAI.dll
+F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Agents.AI.Workflows.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.AI.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.AI.Abstractions.dll
+F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.AI.Evaluation.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.AI.OpenAI.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.Caching.Abstractions.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.Compliance.Abstractions.dll
@@ -30,6 +32,7 @@ F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.Extensions.VectorData.Abstractions.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.ML.Tokenizers.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\OpenAI.dll
+F:\Projetos\GenAIAgent\bin\Debug\net10.0\OpenTelemetry.Api.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\System.ClientModel.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\System.Memory.Data.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\System.Numerics.Tensors.dll
@@ -38,6 +41,7 @@ F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.GeneratedMSBuildEditorConfig
 F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.AssemblyInfoInputs.cache
 F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.AssemblyInfo.cs
 F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.csproj.CoreCompileInputs.cache
+F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.sourcelink.json
 F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.csproj.Up2Date
 F:\Projetos\GenAIAgent\obj\Debug\net10.0\GenAIAgent.dll
 F:\Projetos\GenAIAgent\obj\Debug\net10.0\refint\GenAIAgent.dll
