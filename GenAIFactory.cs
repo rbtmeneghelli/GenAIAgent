@@ -7,6 +7,8 @@ using OpenAI.Chat;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
+using Microsoft.ML;
+using GenAIAgent.Models;
 
 namespace GenAIAgent;
 
@@ -164,6 +166,43 @@ public class GenAIFactory : IGenAIFactory
             if (evt is AgentResponseUpdateEvent update)
                 Console.WriteLine($"[{update.ExecutorId}]: {update.Data}");
 
+    }
+
+    public void CreateAgentMLNET(FeelingData feelingData)
+    {
+        Console.WriteLine("Iniciando o processo de treinamento do modelo de análise de sentimento...\n");
+        var context = new MLContext();
+
+        var data = new List<FeelingData>
+        {
+            new FeelingData { Text = "Isso é muito bom", Label = true },
+            new FeelingData { Text = "Gostei bastante", Label = true },
+            new FeelingData { Text = "O livro é excelente", Label = true },
+            new FeelingData { Text = "Isso é ruim", Label = false },
+            new FeelingData { Text = "A experiência foi Horrível", Label = false }
+        };
+
+        // Convert to IDataView
+        var dataView = context.Data.LoadFromEnumerable(data);
+
+        // Pipeline
+        var pipeline = context.Transforms.Text
+                       .FeaturizeText("Features", nameof(FeelingData.Text))
+                       .Append(context.BinaryClassification.Trainers.SdcaLogisticRegression());
+
+        // Training
+        var model = pipeline.Fit(dataView);
+
+        var predictor = context.Model.CreatePredictionEngine<FeelingData, FeelingPrediction>(model);
+
+        Console.WriteLine($"Texto : {feelingData.Text}\n");
+
+        var resultado = predictor.Predict(feelingData);
+
+        Console.WriteLine($"Predição: {resultado.PredictedLabel}");
+        Console.WriteLine($"Probabilidade: {resultado.Probability}");
+
+        Console.ReadLine();
     }
 }
 

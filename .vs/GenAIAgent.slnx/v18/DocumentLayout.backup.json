@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "F:\\Projetos\\GenAIAgent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\igenaifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:igenaifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\genaifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:genaifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\constants\\fixconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:constants\\fixconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IGenAIFactory.cs",
-              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\IGenAIFactory.cs",
-              "RelativeDocumentMoniker": "IGenAIFactory.cs",
-              "ToolTip": "F:\\Projetos\\GenAIAgent\\IGenAIFactory.cs",
-              "RelativeToolTip": "IGenAIFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T20:33:49.604Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -64,25 +47,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GenAIFactory.cs",
-              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\GenAIFactory.cs",
-              "RelativeDocumentMoniker": "GenAIFactory.cs",
-              "ToolTip": "F:\\Projetos\\GenAIAgent\\GenAIFactory.cs",
-              "RelativeToolTip": "GenAIFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "FixConstant.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\Constants\\FixConstant.cs",
+              "RelativeDocumentMoniker": "Constants\\FixConstant.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\Constants\\FixConstant.cs",
+              "RelativeToolTip": "Constants\\FixConstant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T20:01:28.766Z",
+              "WhenOpened": "2026-04-28T14:43:32.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\Projetos\\GenAIAgent\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T20:01:16.9Z",
               "EditorCaption": ""
