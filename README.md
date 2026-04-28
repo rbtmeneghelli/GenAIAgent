@@ -1,4 +1,4 @@
-# GENAI
+# GenAIAgent
 
 <b>CONTEXTO</b>
 
@@ -24,6 +24,6 @@ Para desenvolvimento desse software foi escolhido as seguintes tecnologias:
   - Utilizar uma IDE da sua escolha, recomendo a utilização do VISUAL STUDIO ou VISUAL STUDIO CODE
   - Utilizar o SDK do NET 10 ou superior
    
-<b>PRINTS DO SISTEMA</b>
+<b>PRINT DO SISTEMA</b>
 
 <img width="1112" height="624" alt="image" src="https://github.com/user-attachments/assets/07547196-e50f-4bc0-a16e-9795ceefb940" />
