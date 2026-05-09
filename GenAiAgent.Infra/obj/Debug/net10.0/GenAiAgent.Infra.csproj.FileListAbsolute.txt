@@ -1,0 +1,16 @@
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\bin\Debug\net10.0\GenAiAgent.Infra.deps.json
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\bin\Debug\net10.0\GenAiAgent.Infra.dll
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\bin\Debug\net10.0\GenAiAgent.Infra.pdb
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\bin\Debug\net10.0\GenAiAgent.Core.dll
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\bin\Debug\net10.0\GenAiAgent.Core.pdb
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.csproj.AssemblyReference.cache
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.AssemblyInfoInputs.cache
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.AssemblyInfo.cs
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.csproj.CoreCompileInputs.cache
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.sourcelink.json
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAge.181FFD23.Up2Date
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.dll
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\refint\GenAiAgent.Infra.dll
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\GenAiAgent.Infra.pdb
+F:\Projetos\GenAIAgent\GenAiAgent.Infra\obj\Debug\net10.0\ref\GenAiAgent.Infra.dll

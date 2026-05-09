@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="GenAiAgent.AI/GenAiAgent.AI.csproj" Id="cca59c41-2181-46b3-b17f-e634ff5ea0e4" />
+  <Project Path="GenAiAgent.Core/GenAiAgent.Core.csproj" Id="299dc20b-d992-48a6-a602-d495dc5a5bbf" />
   <Project Path="GenAIAgent.csproj" />
+  <Project Path="GenAiAgent.Infra/GenAiAgent.Infra.csproj" Id="cb604303-764e-4078-9d62-9492bded59dc" />
 </Solution>

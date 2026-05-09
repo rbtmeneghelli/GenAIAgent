@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "F:\\Projetos\\GenAIAgent\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|f:\\projetos\\genaiagent\\genaiagent.infra\\services\\newsletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|solutionrelative:genaiagent.infra\\services\\newsletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|f:\\projetos\\genaiagent\\genaiagent.infra\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|solutionrelative:genaiagent.infra\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|f:\\projetos\\genaiagent\\genaiagent.infra\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|solutionrelative:genaiagent.infra\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\constants\\fixconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:constants\\fixconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\genaiagent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:genaiagent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projetos\\GenAIAgent\\obj\\Debug\\net10.0\\GenAIAgent.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net10.0\\GenAIAgent.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,28 +62,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FixConstant.cs",
-              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\Constants\\FixConstant.cs",
-              "RelativeDocumentMoniker": "Constants\\FixConstant.cs",
-              "ToolTip": "F:\\Projetos\\GenAIAgent\\Constants\\FixConstant.cs",
-              "RelativeToolTip": "Constants\\FixConstant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "NewsletterService.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\Services\\NewsletterService.cs",
+              "RelativeDocumentMoniker": "GenAiAgent.Infra\\Services\\NewsletterService.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\Services\\NewsletterService.cs",
+              "RelativeToolTip": "GenAiAgent.Infra\\Services\\NewsletterService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T14:43:32.246Z",
+              "WhenOpened": "2026-05-09T03:54:56.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "GenAiAgent.Infra\\Services\\EmailService.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\Services\\EmailService.cs",
+              "RelativeToolTip": "GenAiAgent.Infra\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T03:54:12.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "GenAiAgent.Infra\\DependencyInjection.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\DependencyInjection.cs",
+              "RelativeToolTip": "GenAiAgent.Infra\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T03:53:18.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\Projetos\\GenAIAgent\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T20:01:16.9Z",
+              "WhenOpened": "2026-05-09T03:50:10.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenAIAgent.csproj",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\GenAIAgent.csproj",
+              "RelativeDocumentMoniker": "GenAIAgent.csproj",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\GenAIAgent.csproj",
+              "RelativeToolTip": "GenAIAgent.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-09T03:47:41.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenAIAgent.AssemblyInfo.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\obj\\Debug\\net10.0\\GenAIAgent.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net10.0\\GenAIAgent.AssemblyInfo.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\obj\\Debug\\net10.0\\GenAIAgent.AssemblyInfo.cs",
+              "RelativeToolTip": "obj\\Debug\\net10.0\\GenAIAgent.AssemblyInfo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwA8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T03:47:40.579Z",
               "EditorCaption": ""
             }
           ]

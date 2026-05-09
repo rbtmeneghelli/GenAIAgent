@@ -1,10 +1,32 @@
-﻿using GenAIAgent;
+﻿using GenAiAgent.AI;
+using GenAiAgent.Core;
+using GenAiAgent.Infra;
+using GenAIAgent;
 using GenAIAgent.Constants;
 using GenAIAgent.Models;
+using GenAIAgent.Workers;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
-var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
 bool runProgram = true;
+
+var builder = Host.CreateApplicationBuilder(args);
+
+builder.Services.AddServices();
+builder.Services.AddRepositories();
+builder.Services.AddAgents();
+
+builder.Services.AddHostedService<NewsletterWorker>();
+
+builder.Configuration.AddUserSecrets<Program>();
+
+var app = builder.Build();
+
+Configuration.OpenAi.ApiKey = builder.Configuration["OpenAi:ApiKey"] ?? throw new Exception("OpenAI API Key not found in configuration");
+
+var environment = app.Services.GetRequiredService<IHostEnvironment>();
+Configuration.RootPath = environment.ContentRootPath;
 
 do
 {
@@ -37,19 +59,19 @@ do
             ConsoleAppExtension.ShowConsoleMessage(FixConstant.EXIT_CHOICE);
             break;
         case 1:
-            await genAIFactory.CreateAgent(config);
+            await genAIFactory.CreateAgent();
             ConsoleAppExtension.ShowConsoleMessage(FixConstant.RIGHT_CHOICE);
             break;
         case 2:
-            await genAIFactory.CreateAgent_V1(config);
+            await genAIFactory.CreateAgent_V1();
             ConsoleAppExtension.ShowConsoleMessage(FixConstant.RIGHT_CHOICE);
             break;
         case 3:
-            await genAIFactory.CreateAgent_V2(config);
+            await genAIFactory.CreateAgent_V2();
             ConsoleAppExtension.ShowConsoleMessage(FixConstant.RIGHT_CHOICE);
             break;
         case 4:
-            await genAIFactory.CreateAgentWorkFlow_V1(config);
+            await genAIFactory.CreateAgentWorkFlow_V1();
             ConsoleAppExtension.ShowConsoleMessage(FixConstant.RIGHT_CHOICE);
             break;
         case 5:

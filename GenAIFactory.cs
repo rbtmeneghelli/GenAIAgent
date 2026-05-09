@@ -1,31 +1,29 @@
-﻿using Microsoft.Agents.AI;
+﻿using GenAiAgent.Core;
+using GenAIAgent.Models;
+using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
-using Microsoft.Extensions.Configuration;
+using Microsoft.ML;
 using OpenAI;
 using OpenAI.Chat;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
-using Microsoft.ML;
-using GenAIAgent.Models;
 
 namespace GenAIAgent;
 
 public class GenAIFactory : IGenAIFactory
 {
-    public async Task CreateAgent(IConfiguration config)
+    public async Task CreateAgent()
     {
-        var openAPIKey = config["OpenAi:ApiKey"];
-
-        var agent = new OpenAIClient(openAPIKey)
+        var agent = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent("""Você é um assistente que pode fornecer informações sobre o clima.""", tools:
                     [
                         AIFunctionFactory.Create(WeatherTool.GetWeather)
                     ]);
 
-        var agent2 = new OpenAIClient(openAPIKey)
+        var agent2 = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent("""Você é um assistente que irá receber um texto em idioma português e ira traduzir o texto para o idioma em inglês""");
 
@@ -41,18 +39,16 @@ public class GenAIFactory : IGenAIFactory
         }
     }
 
-    public async Task CreateAgent_V1(IConfiguration config)
+    public async Task CreateAgent_V1()
     {
-        var openAPIKey = config["OpenAi:ApiKey"];
-
-        var agent = new OpenAIClient(openAPIKey)
+        var agent = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent("""Você é um assistente que pode fornecer informações sobre o clima.""", tools:
                     [
                         AIFunctionFactory.Create(WeatherTool.GetWeather)
                     ]);
 
-        var agent2 = new OpenAIClient(openAPIKey)
+        var agent2 = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent("""Você é um assistente que irá receber um texto em idioma português e ira traduzir o texto para o idioma em inglês""");
 
@@ -76,10 +72,9 @@ public class GenAIFactory : IGenAIFactory
         }
     }
 
-    public async Task CreateAgent_V2(IConfiguration config)
+    public async Task CreateAgent_V2()
     {
-        var openAPIKey = config["OpenAi:ApiKey"];
-        var agent = new OpenAIClient(openAPIKey)
+        var agent = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent(new ChatClientAgentOptions
                     {
@@ -96,11 +91,9 @@ public class GenAIFactory : IGenAIFactory
         Console.WriteLine(await agent.RunAsync("Qual é o meu nome", session));
     }
 
-    public async Task CreateAgentWorkFlow_V1(IConfiguration config)
+    public async Task CreateAgentWorkFlow_V1()
     {
-        var openAPIKey = config["OpenAi:ApiKey"];
-
-        var agentRedator = new OpenAIClient(openAPIKey)
+        var agentRedator = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent(new ChatClientAgentOptions
                     {
@@ -116,7 +109,7 @@ public class GenAIFactory : IGenAIFactory
                         Name = "RedatorAgent"
                     });
 
-        var agentRevisor = new OpenAIClient(openAPIKey)
+        var agentRevisor = new OpenAIClient(Configuration.OpenAi.ApiKey)
                     .GetChatClient("gpt-4o-mini")
                     .AsAIAgent(new ChatClientAgentOptions
                     {
@@ -132,7 +125,7 @@ public class GenAIFactory : IGenAIFactory
                         Name = "RevisorAgent"
                     });
 
-        var agentSeo = new OpenAIClient(openAPIKey)
+        var agentSeo = new OpenAIClient(Configuration.OpenAi.ApiKey)
             .GetChatClient("gpt-4o-mini")
             .AsAIAgent(new ChatClientAgentOptions
             {

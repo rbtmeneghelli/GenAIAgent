@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenAIAgent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8cb7251e1dd8eeb4091d1a763f96a748214f386")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf9a85403203ff4c17a91adb2f87d2e8baf6aec7")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenAIAgent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenAIAgent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
