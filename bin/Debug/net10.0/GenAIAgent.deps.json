@@ -8,16 +8,109 @@
     ".NETCoreApp,Version=v10.0": {
       "GenAIAgent/1.0.0": {
         "dependencies": {
+          "Azure.AI.OpenAI": "2.1.0",
+          "Azure.AI.Projects": "2.0.1",
           "GenAiAgent.AI": "1.0.0",
           "GenAiAgent.Core": "1.0.0",
           "GenAiAgent.Infra": "1.0.0",
           "Microsoft.Agents.AI.OpenAI": "1.5.0",
           "Microsoft.Agents.AI.Workflows": "1.5.0",
           "Microsoft.Extensions.Hosting": "10.0.7",
-          "Microsoft.ML": "5.0.0"
+          "Microsoft.ML": "6.0.0-preview.26160.2"
         },
         "runtime": {
           "GenAIAgent.dll": {}
+        }
+      },
+      "Azure.AI.Extensions.OpenAI/2.0.0": {
+        "dependencies": {
+          "Azure.Core": "1.53.0",
+          "OpenAI": "2.10.0"
+        },
+        "runtime": {
+          "lib/net10.0/Azure.AI.Extensions.OpenAI.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.26.20107"
+          }
+        }
+      },
+      "Azure.AI.OpenAI/2.1.0": {
+        "dependencies": {
+          "Azure.Core": "1.53.0",
+          "OpenAI": "2.10.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.OpenAI.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.100.24.60605"
+          }
+        }
+      },
+      "Azure.AI.Projects/2.0.1": {
+        "dependencies": {
+          "Azure.AI.Extensions.OpenAI": "2.0.0",
+          "Azure.AI.Projects.Agents": "2.0.0",
+          "Azure.Core": "1.53.0",
+          "Azure.Storage.Blobs": "12.26.0"
+        },
+        "runtime": {
+          "lib/net10.0/Azure.AI.Projects.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.126.22303"
+          }
+        }
+      },
+      "Azure.AI.Projects.Agents/2.0.0": {
+        "dependencies": {
+          "Azure.Core": "1.53.0",
+          "OpenAI": "2.10.0"
+        },
+        "runtime": {
+          "lib/net10.0/Azure.AI.Projects.Agents.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.26.20107"
+          }
+        }
+      },
+      "Azure.Core/1.53.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "10.0.3",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.7",
+          "Microsoft.Extensions.Hosting.Abstractions": "10.0.7",
+          "Microsoft.Identity.Client": "4.83.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "4.83.1",
+          "System.ClientModel": "1.10.0",
+          "System.Memory.Data": "10.0.3"
+        },
+        "runtime": {
+          "lib/net10.0/Azure.Core.dll": {
+            "assemblyVersion": "1.53.0.0",
+            "fileVersion": "1.5300.26.21006"
+          }
+        }
+      },
+      "Azure.Storage.Blobs/12.26.0": {
+        "dependencies": {
+          "Azure.Core": "1.53.0",
+          "Azure.Storage.Common": "12.25.0"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Storage.Blobs.dll": {
+            "assemblyVersion": "12.26.0.0",
+            "fileVersion": "12.2600.25.51304"
+          }
+        }
+      },
+      "Azure.Storage.Common/12.25.0": {
+        "dependencies": {
+          "Azure.Core": "1.53.0",
+          "System.IO.Hashing": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Storage.Common.dll": {
+            "assemblyVersion": "12.25.0.0",
+            "fileVersion": "12.2500.25.51304"
+          }
         }
       },
       "Google.Protobuf/3.30.2": {
@@ -104,11 +197,11 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/9.0.4": {
+      "Microsoft.Bcl.AsyncInterfaces/10.0.3": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "9.0.0.4",
-            "fileVersion": "9.0.425.16305"
+            "assemblyVersion": "10.0.0.3",
+            "fileVersion": "10.0.326.7603"
           }
         }
       },
@@ -560,11 +653,42 @@
           }
         }
       },
-      "Microsoft.ML/5.0.0": {
+      "Microsoft.Identity.Client/4.83.1": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "9.0.4",
-          "Microsoft.ML.CpuMath": "5.0.0",
-          "Microsoft.ML.DataView": "5.0.0",
+          "Microsoft.IdentityModel.Abstractions": "8.14.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Identity.Client.dll": {
+            "assemblyVersion": "4.83.1.0",
+            "fileVersion": "4.83.1.0"
+          }
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/4.83.1": {
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.83.1",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
+            "assemblyVersion": "4.83.1.0",
+            "fileVersion": "4.83.1.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/8.14.0": {
+        "runtime": {
+          "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "8.14.0.0",
+            "fileVersion": "8.14.0.60815"
+          }
+        }
+      },
+      "Microsoft.ML/6.0.0-preview.26160.2": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "10.0.3",
+          "Microsoft.ML.CpuMath": "6.0.0-preview.26160.2",
+          "Microsoft.ML.DataView": "6.0.0-preview.26160.2",
           "Newtonsoft.Json": "13.0.3",
           "System.CodeDom": "9.0.4",
           "System.Numerics.Tensors": "10.0.6"
@@ -572,27 +696,27 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.ML.Core.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           },
           "lib/netstandard2.0/Microsoft.ML.Data.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           },
           "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           },
           "lib/netstandard2.0/Microsoft.ML.PCA.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           },
           "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           },
           "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           }
         },
         "runtimeTargets": {
@@ -649,36 +773,36 @@
           "runtimes/win-arm64/native/LdaNative.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "0.2300.25.55704"
+            "fileVersion": "0.2400.26.16002"
           },
           "runtimes/win-x64/native/LdaNative.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.2300.25.55704"
+            "fileVersion": "0.2400.26.16002"
           },
           "runtimes/win-x86/native/LdaNative.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "0.2300.25.55704"
+            "fileVersion": "0.2400.26.16002"
           }
         }
       },
-      "Microsoft.ML.CpuMath/5.0.0": {
+      "Microsoft.ML.CpuMath/6.0.0-preview.26160.2": {
         "dependencies": {
           "System.Numerics.Tensors": "10.0.6"
         },
         "runtime": {
           "lib/net8.0/Microsoft.ML.CpuMath.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           }
         }
       },
-      "Microsoft.ML.DataView/5.0.0": {
+      "Microsoft.ML.DataView/6.0.0-preview.26160.2": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.ML.DataView.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "5.0.25.55704"
+            "fileVersion": "6.0.26.16002"
           }
         }
       },
@@ -764,6 +888,14 @@
           }
         }
       },
+      "System.IO.Hashing/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.Memory.Data/10.0.3": {
         "runtime": {
           "lib/net10.0/System.Memory.Data.dll": {
@@ -777,6 +909,22 @@
           "lib/net10.0/System.Numerics.Tensors.dll": {
             "assemblyVersion": "10.0.0.6",
             "fileVersion": "10.0.626.17701"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
           }
         }
       },
@@ -824,6 +972,55 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Azure.AI.Extensions.OpenAI/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z1yUaGcNMPEm6jrV0YIa6ASIOkG3OLSDvX+PJkUkN1uv1b0pPIkUElLLppNouauxXjo/C+pW2rNNKdi784B2Pw==",
+      "path": "azure.ai.extensions.openai/2.0.0",
+      "hashPath": "azure.ai.extensions.openai.2.0.0.nupkg.sha512"
+    },
+    "Azure.AI.OpenAI/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-doixr3tcsIcdzbzF9NxKt+6U0NKj6aPeOCPYONPsWjyf3gxVndVJAdjPcVdqeR/3vcRHXRgGnGlv+iXx5jMA4g==",
+      "path": "azure.ai.openai/2.1.0",
+      "hashPath": "azure.ai.openai.2.1.0.nupkg.sha512"
+    },
+    "Azure.AI.Projects/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kyNrCOgh3+bFKyPweD9sT2uQkUfjM6G9i/kbic/+eETauCABM4yRF4WuKnOCLAr0a9RaCQ8gveOGlpTT0DmWyw==",
+      "path": "azure.ai.projects/2.0.1",
+      "hashPath": "azure.ai.projects.2.0.1.nupkg.sha512"
+    },
+    "Azure.AI.Projects.Agents/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jol7z6/IKelnimA/zA1tk5vY2HxwVMwPjp77SGcPGOnJ6gZkz7l5Q2URzXrKfL4rG14D2qK+n1uD8eVySHZ5gQ==",
+      "path": "azure.ai.projects.agents/2.0.0",
+      "hashPath": "azure.ai.projects.agents.2.0.0.nupkg.sha512"
+    },
+    "Azure.Core/1.53.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x9c/toFMOtRrlTdFuE7rlGCVAduQzWVfKmLz5juj41zJAXEhYD5hluiUyyAEzJ6OxpBnKtiaBztzwpZITAVjtg==",
+      "path": "azure.core/1.53.0",
+      "hashPath": "azure.core.1.53.0.nupkg.sha512"
+    },
+    "Azure.Storage.Blobs/12.26.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EBRSHmI0eNzdufcIS1Rf7Ez9M8V1Jl7pMV4UWDERDMCv513KtAVsgz2ez2FQP9Qnwg7uEQrP+Uc7vBtumlr7sQ==",
+      "path": "azure.storage.blobs/12.26.0",
+      "hashPath": "azure.storage.blobs.12.26.0.nupkg.sha512"
+    },
+    "Azure.Storage.Common/12.25.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MHGWp4aLHRo0BdLj25U2qYdYK//Zz21k4bs3SVyNQEmJbBl3qZ8GuOmTSXJ+Zad93HnFXfvD8kyMr0gjA8Ftpw==",
+      "path": "azure.storage.common/12.25.0",
+      "hashPath": "azure.storage.common.12.25.0.nupkg.sha512"
+    },
     "Google.Protobuf/3.30.2": {
       "type": "package",
       "serviceable": true,
@@ -859,12 +1056,12 @@
       "path": "microsoft.agents.ai.workflows/1.5.0",
       "hashPath": "microsoft.agents.ai.workflows.1.5.0.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/9.0.4": {
+    "Microsoft.Bcl.AsyncInterfaces/10.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9VGI5kxIvrNG2mqLQZnUR6y/3fcnygD8eNpHR+CqfbnIXvea6nehnYknDKQTxZVPMpzpNca+7DxLBmpdB3q0Bw==",
-      "path": "microsoft.bcl.asyncinterfaces/9.0.4",
-      "hashPath": "microsoft.bcl.asyncinterfaces.9.0.4.nupkg.sha512"
+      "sha512": "sha512-TV62UsrJZPX6gbt3c4WrtXh7bmaDIcMqf9uft1cc4L6gJXOU07hDGEh+bFQh/L2Az0R1WVOkiT66lFqS6G2NmA==",
+      "path": "microsoft.bcl.asyncinterfaces/10.0.3",
+      "hashPath": "microsoft.bcl.asyncinterfaces.10.0.3.nupkg.sha512"
     },
     "Microsoft.Extensions.AI/10.5.1": {
       "type": "package",
@@ -1111,26 +1308,47 @@
       "path": "microsoft.extensions.vectordata.abstractions/9.7.0",
       "hashPath": "microsoft.extensions.vectordata.abstractions.9.7.0.nupkg.sha512"
     },
-    "Microsoft.ML/5.0.0": {
+    "Microsoft.Identity.Client/4.83.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-clHLX6bjcRpuHDRkXwkm/gSILifT0DOXXzgor4kBhjTkz5G419BCXhZ1xVk/GsMH6koqWwMONjQKzSSCSVZrIQ==",
-      "path": "microsoft.ml/5.0.0",
-      "hashPath": "microsoft.ml.5.0.0.nupkg.sha512"
+      "sha512": "sha512-jOLIrZ3cynoqHLLO1cXplFFabrhrMEYs/EuKHvmCyrOm1axqiVFT6nCSnHxk7w5+d2BeQfCdM12Yf/0X7OeS1g==",
+      "path": "microsoft.identity.client/4.83.1",
+      "hashPath": "microsoft.identity.client.4.83.1.nupkg.sha512"
     },
-    "Microsoft.ML.CpuMath/5.0.0": {
+    "Microsoft.Identity.Client.Extensions.Msal/4.83.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Qv0OeYmFkzDC9AjfJfUUTiIYcnb49K5oGtUUOIkr0BrApqWm6niHZqCrD3iJJi2BORbto/eEfP7/+uNqHxGvYg==",
-      "path": "microsoft.ml.cpumath/5.0.0",
-      "hashPath": "microsoft.ml.cpumath.5.0.0.nupkg.sha512"
+      "sha512": "sha512-I3k4J4Hj4KbLEFanjeUzzDOVecukETaTgEkJ7h2pP/Yazs6SLp6TVUTo/Eo+ptPXMwvc+iX7rBFtMSUrA7R+Mg==",
+      "path": "microsoft.identity.client.extensions.msal/4.83.1",
+      "hashPath": "microsoft.identity.client.extensions.msal.4.83.1.nupkg.sha512"
     },
-    "Microsoft.ML.DataView/5.0.0": {
+    "Microsoft.IdentityModel.Abstractions/8.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-G8onJ9msBpLYea29WyG+NRV010rg75hJDUIEK3+sSDFAR0OV5p74QjZWnpNbyhT8OkAJdSNkif4l9/iCWZ2LOQ==",
-      "path": "microsoft.ml.dataview/5.0.0",
-      "hashPath": "microsoft.ml.dataview.5.0.0.nupkg.sha512"
+      "sha512": "sha512-iwbCpSjD3ehfTwBhtSNEtKPK0ICun6ov7Ibx6ISNA9bfwIyzI2Siwyi9eJFCJBwxowK9xcA1mj+jBWiigeqgcQ==",
+      "path": "microsoft.identitymodel.abstractions/8.14.0",
+      "hashPath": "microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512"
+    },
+    "Microsoft.ML/6.0.0-preview.26160.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r/yUe5aGW7BL6ZyLaD7Fdsp2ocoreZXIpPfas95pigQiktaB1KoFFj4rEx35gM/A3M0xeu6lZYjpCrEByBwNhQ==",
+      "path": "microsoft.ml/6.0.0-preview.26160.2",
+      "hashPath": "microsoft.ml.6.0.0-preview.26160.2.nupkg.sha512"
+    },
+    "Microsoft.ML.CpuMath/6.0.0-preview.26160.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FsVNASiQrgXz1P+Y6k5SYez5TpUPFEF2sGNWItfheqzKTYB+LDQPUNhtppPiR0ipAkiBRRlXC5FxPyK2x3tRjA==",
+      "path": "microsoft.ml.cpumath/6.0.0-preview.26160.2",
+      "hashPath": "microsoft.ml.cpumath.6.0.0-preview.26160.2.nupkg.sha512"
+    },
+    "Microsoft.ML.DataView/6.0.0-preview.26160.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-53oyTKHxvoxVQA32BxalPEsDccG+0eY0AWJHdh5xn151mcFZOIR/bxWzKtunpov7lfANNauYza2iiNMmnOpi/Q==",
+      "path": "microsoft.ml.dataview/6.0.0-preview.26160.2",
+      "hashPath": "microsoft.ml.dataview.6.0.0-preview.26160.2.nupkg.sha512"
     },
     "Microsoft.ML.Tokenizers/2.0.0": {
       "type": "package",
@@ -1181,6 +1399,13 @@
       "path": "system.diagnostics.eventlog/10.0.7",
       "hashPath": "system.diagnostics.eventlog.10.0.7.nupkg.sha512"
     },
+    "System.IO.Hashing/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==",
+      "path": "system.io.hashing/8.0.0",
+      "hashPath": "system.io.hashing.8.0.0.nupkg.sha512"
+    },
     "System.Memory.Data/10.0.3": {
       "type": "package",
       "serviceable": true,
@@ -1194,6 +1419,13 @@
       "sha512": "sha512-DOZ8Z8CxHVWU8gSo4ZQ8sCAPIQb+agp56ISuMiu39WWZiV+reZwn9NM1tj4lRDfqLaOAinF6zTi0csmFBQes9Q==",
       "path": "system.numerics.tensors/10.0.6",
       "hashPath": "system.numerics.tensors.10.0.6.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
     },
     "GenAiAgent.AI/1.0.0": {
       "type": "project",

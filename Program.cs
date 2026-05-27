@@ -39,12 +39,13 @@ do
     Console.WriteLine("3 - Chamar código de agente V2");
     Console.WriteLine("4 - Chamar código de agente WorkFlow V1");
     Console.WriteLine("5 - Chamar um serviço de aprendizado de maquina");
+    Console.WriteLine("6 - Chamar um código de agente do azure AI foundry");
 
     string? userChoice = Console.ReadLine();
 
     int.TryParse(userChoice, out int choice);
 
-    if (choice < 0 || choice > 5)
+    if (choice < 0 || choice > 6)
     {
         ConsoleAppExtension.ShowConsoleMessage(FixConstant.WRONG_CHOICE);
         continue;
@@ -78,11 +79,16 @@ do
             genAIFactory.CreateAgentMLNET(new FeelingData { Text = "Isso é excelente!" });
             ConsoleAppExtension.ShowConsoleMessage(FixConstant.RIGHT_CHOICE);
             break;
+        case 6:
+            var azureAgent = await genAIFactory.CreateAzureAgent();
+            Console.WriteLine("Digite a pergunta para o agente Azure AI Foundry");
+            var ask = Console.ReadLine();
+            var result = await genAIFactory.UseAzureAgent(azureAgent, ask ?? "Explique .NET 8");
+            Console.WriteLine($"A resposta da sua pergunta é: {result}");
+            ConsoleAppExtension.ShowConsoleMessage(result);
+            break;
     }
-
-
-}
-while (runProgram);
+} while (runProgram);
 
 file static class ConsoleAppExtension
 {

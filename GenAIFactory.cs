@@ -1,4 +1,7 @@
-﻿using GenAiAgent.Core;
+﻿using Azure.Identity;
+using Azure.AI.Projects;
+using Azure.AI.OpenAI;
+using GenAiAgent.Core;
 using GenAIAgent.Models;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
@@ -11,6 +14,17 @@ using System.Text.Json.Serialization;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 
 namespace GenAIAgent;
+
+/// <summary>
+/// Quando usar agentes de IA
+/// Agentes são especialmente úteis em cenários como:
+/// - assistentes corporativos
+/// -automação de atendimento
+/// -suporte técnico inteligente
+/// -consulta de documentos
+/// -assistentes de vendas
+/// -integração com sistemas empresariais
+/// </summary>
 
 public class GenAIFactory : IGenAIFactory
 {
@@ -196,6 +210,36 @@ public class GenAIFactory : IGenAIFactory
         Console.WriteLine($"Probabilidade: {resultado.Probability}");
 
         Console.ReadLine();
+    }
+
+
+    public async Task<ChatClient> CreateAzureAgent()
+    {
+        // 1. Criar client do projeto
+        var endpoint = new Uri("<endpoint>");
+        var credential = new DefaultAzureCredential();
+
+        var projectClient = new AIProjectClient(endpoint, credential);
+
+        // 2. Obter conexão com OpenAI dentro do Azure AI Foundry
+        var connection = projectClient.GetConnection(typeof(AzureOpenAIClient).FullName!);
+
+        if (!connection.TryGetLocatorAsUri(out var uri))
+            throw new Exception("Invalid connection");
+
+        // 3. Criar client de inferência
+        var openAiClient = new AzureOpenAIClient(uri, credential);
+
+        // 4. Criar client de chat
+        return openAiClient.GetChatClient("gpt-4o-mini");
+    }
+
+    public async Task<string> UseAzureAgent(ChatClient chatClient, string ask)
+    {
+        // 5. Executar chat
+        var response = chatClient.CompleteChat(ask);
+        var answer = response.Value.Content[0].Text;
+        return answer;
     }
 }
 

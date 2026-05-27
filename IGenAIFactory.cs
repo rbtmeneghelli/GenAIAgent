@@ -1,4 +1,5 @@
 ﻿using GenAIAgent.Models;
+using OpenAI.Chat;
 
 namespace GenAIAgent;
 
@@ -9,4 +10,6 @@ public interface IGenAIFactory
     Task CreateAgent_V2();
     Task CreateAgentWorkFlow_V1();
     void CreateAgentMLNET(FeelingData feelingData);
+    Task<ChatClient> CreateAzureAgent();
+    Task<string> UseAzureAgent(ChatClient chatClient, string ask);
 }
