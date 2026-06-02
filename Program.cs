@@ -40,12 +40,14 @@ do
     Console.WriteLine("4 - Chamar código de agente WorkFlow V1");
     Console.WriteLine("5 - Chamar um serviço de aprendizado de maquina");
     Console.WriteLine("6 - Chamar um código de agente do azure AI foundry");
+    Console.WriteLine("7 - Chamar um código de IA generativa da Anthropic similar ao (ChatGpt, Github Copilot, DeepSeek, Gemini e etc...)");
+    Console.WriteLine("8 - Chamar um código para simular um ChatClient da Anthropic");
 
     string? userChoice = Console.ReadLine();
 
     int.TryParse(userChoice, out int choice);
 
-    if (choice < 0 || choice > 6)
+    if (choice < 0 || choice > 8)
     {
         ConsoleAppExtension.ShowConsoleMessage(FixConstant.WRONG_CHOICE);
         continue;
@@ -82,10 +84,18 @@ do
         case 6:
             var azureAgent = await genAIFactory.CreateAzureAgent();
             Console.WriteLine("Digite a pergunta para o agente Azure AI Foundry");
-            var ask = Console.ReadLine();
-            var result = await genAIFactory.UseAzureAgent(azureAgent, ask ?? "Explique .NET 8");
-            Console.WriteLine($"A resposta da sua pergunta é: {result}");
-            ConsoleAppExtension.ShowConsoleMessage(result);
+            var azureFoundryAsk = Console.ReadLine();
+            var azureFoundryResult = await genAIFactory.UseAzureAgent(azureAgent, azureFoundryAsk ?? "Explique .NET 8");
+            Console.WriteLine($"A resposta da sua pergunta é: {azureFoundryResult}");
+            ConsoleAppExtension.ShowConsoleMessage(azureFoundryResult);
+            break;
+        case 7:
+            Console.WriteLine("Digite uma pergunta para a AI generativa da anthropic");
+            var anthropicAsk = Console.ReadLine();
+            await genAIFactory.UseAnthropicFromGenerateAI(anthropicAsk);
+            break;
+        case 8:
+            await genAIFactory.UseAnthropicMCP();
             break;
     }
 } while (runProgram);

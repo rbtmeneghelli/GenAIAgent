@@ -1,6 +1,7 @@
 F:\Projetos\GenAIAgent\GenAiAgent.Core\bin\Debug\net10.0\GenAiAgent.Core.deps.json
 F:\Projetos\GenAIAgent\GenAiAgent.Core\bin\Debug\net10.0\GenAiAgent.Core.dll
 F:\Projetos\GenAIAgent\GenAiAgent.Core\bin\Debug\net10.0\GenAiAgent.Core.pdb
+F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.csproj.AssemblyReference.cache
 F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.GeneratedMSBuildEditorConfig.editorconfig
 F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.AssemblyInfoInputs.cache
 F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.AssemblyInfo.cs

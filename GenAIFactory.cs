@@ -1,12 +1,15 @@
-﻿using Azure.Identity;
-using Azure.AI.Projects;
+﻿using Anthropic;
+using Anthropic.Models.Messages;
 using Azure.AI.OpenAI;
+using Azure.AI.Projects;
+using Azure.Identity;
 using GenAiAgent.Core;
 using GenAIAgent.Models;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
 using Microsoft.ML;
+using ModelContextProtocol.Client;
 using OpenAI;
 using OpenAI.Chat;
 using System.Text.Json;
@@ -212,7 +215,6 @@ public class GenAIFactory : IGenAIFactory
         Console.ReadLine();
     }
 
-
     public async Task<ChatClient> CreateAzureAgent()
     {
         // 1. Criar client do projeto
@@ -240,6 +242,74 @@ public class GenAIFactory : IGenAIFactory
         var response = chatClient.CompleteChat(ask);
         var answer = response.Value.Content[0].Text;
         return answer;
+    }
+
+    /// <summary>
+    /// Documentação oficial >> https://platform.claude.com/docs/en/api/sdks/csharp
+    /// </summary>
+    /// <returns></returns>
+    public async Task UseAnthropicFromGenerateAI(string contentMessage, bool autoconfig = true, bool applyStream = true)
+    {
+        AnthropicClient client = autoconfig ?
+                                 new() : // Configure the client using environment variables (ANTHROPIC_API_KEY (string), ANTHROPIC_AUTH_TOKEN (string) and ANTHROPIC_BASE_URL (string))
+                                 new() { ApiKey = "my-anthropic-api-key" }; // Manually configuration
+
+        MessageCreateParams parameters = new()
+        {
+            MaxTokens = 1024,
+            Messages =
+            [
+                new()
+        {
+            Role = Role.User,
+            Content = contentMessage,
+        },
+            ],
+            Model = Model.ClaudeOpus4_7,
+        };
+
+        if (applyStream)
+        {
+            await foreach (var message in client.Messages.CreateStreaming(parameters))
+            {
+                Console.WriteLine(message);
+            }
+        }
+        else
+        {
+            var message = await client.WithOptions(options =>
+                          options with
+                          {
+                              BaseUrl = "https://example.com",
+                              Timeout = TimeSpan.FromSeconds(42),
+                          }
+                          )
+                          .Messages.Create(parameters);
+
+            Console.WriteLine(message);
+        }
+    }
+
+    /// <summary>
+    /// Documentação oficial >> https://platform.claude.com/docs/en/api/sdks/csharp
+    /// </summary>
+    /// <returns></returns>
+    public async Task UseAnthropicMCP()
+    {
+        // Configured using the ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN and ANTHROPIC_BASE_URL environment variables
+        AnthropicClient client = new();
+
+        IChatClient chatClient = client.AsIChatClient("claude-opus-4-8")
+                                 .AsBuilder()
+                                 .UseFunctionInvocation()
+                                 .Build();
+
+        // Using McpClient from the MCP C# SDK
+        McpClient learningServer = await McpClient.CreateAsync(new ModelContextProtocol.Client.HttpClientTransport(new() { Endpoint = new("https://learn.microsoft.com/api/mcp") }));
+
+        ChatOptions options = new() { Tools = [.. await learningServer.ListToolsAsync()] };
+
+        Console.WriteLine(await chatClient.GetResponseAsync("Tell me about IChatClient", options));
     }
 }
 

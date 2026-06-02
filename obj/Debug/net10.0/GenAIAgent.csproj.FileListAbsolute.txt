@@ -3,6 +3,7 @@ F:\Projetos\GenAIAgent\bin\Debug\net10.0\GenAIAgent.deps.json
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\GenAIAgent.runtimeconfig.json
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\GenAIAgent.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\GenAIAgent.pdb
+F:\Projetos\GenAIAgent\bin\Debug\net10.0\Anthropic.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Azure.AI.Extensions.OpenAI.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Azure.AI.OpenAI.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Azure.AI.Projects.dll
@@ -63,6 +64,7 @@ F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.ML.Transforms.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.ML.CpuMath.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.ML.DataView.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Microsoft.ML.Tokenizers.dll
+F:\Projetos\GenAIAgent\bin\Debug\net10.0\ModelContextProtocol.Core.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\Newtonsoft.Json.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\OpenAI.dll
 F:\Projetos\GenAIAgent\bin\Debug\net10.0\OpenTelemetry.Api.dll

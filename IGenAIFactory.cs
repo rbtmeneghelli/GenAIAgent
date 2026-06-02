@@ -12,4 +12,6 @@ public interface IGenAIFactory
     void CreateAgentMLNET(FeelingData feelingData);
     Task<ChatClient> CreateAzureAgent();
     Task<string> UseAzureAgent(ChatClient chatClient, string ask);
+    Task UseAnthropicFromGenerateAI(string contentMessage, bool autoconfig = true, bool applyStream = true);
+    Task UseAnthropicMCP();
 }

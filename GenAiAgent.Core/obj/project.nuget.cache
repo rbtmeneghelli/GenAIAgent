@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "94ZYaxzeZIw=",
+  "dgSpecHash": "/xi0A0wyLAU=",
   "success": true,
   "projectFilePath": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Core\\GenAiAgent.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Master\\.nuget\\packages\\anthropic\\12.24.1\\anthropic.12.24.1.nupkg.sha512",
+    "C:\\Users\\Master\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\10.5.1\\microsoft.extensions.ai.abstractions.10.5.1.nupkg.sha512"
+  ],
   "logs": []
 }

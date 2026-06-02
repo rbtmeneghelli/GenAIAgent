@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "GenAIAgent/1.0.0": {
         "dependencies": {
+          "Anthropic": "12.24.1",
           "Azure.AI.OpenAI": "2.1.0",
           "Azure.AI.Projects": "2.0.1",
           "GenAiAgent.AI": "1.0.0",
@@ -16,10 +17,22 @@
           "Microsoft.Agents.AI.OpenAI": "1.5.0",
           "Microsoft.Agents.AI.Workflows": "1.5.0",
           "Microsoft.Extensions.Hosting": "10.0.7",
-          "Microsoft.ML": "6.0.0-preview.26160.2"
+          "Microsoft.ML": "6.0.0-preview.26160.2",
+          "ModelContextProtocol.Core": "1.3.0"
         },
         "runtime": {
           "GenAIAgent.dll": {}
+        }
+      },
+      "Anthropic/12.24.1": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2"
+        },
+        "runtime": {
+          "lib/net9.0/Anthropic.dll": {
+            "assemblyVersion": "12.24.1.0",
+            "fileVersion": "12.24.1.0"
+          }
         }
       },
       "Azure.AI.Extensions.OpenAI/2.0.0": {
@@ -125,7 +138,7 @@
         "dependencies": {
           "Microsoft.Agents.AI.Abstractions": "1.5.0",
           "Microsoft.Extensions.AI": "10.5.1",
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2",
           "Microsoft.Extensions.AI.Evaluation": "10.4.0",
           "Microsoft.Extensions.Compliance.Abstractions": "10.5.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.7",
@@ -143,7 +156,7 @@
       },
       "Microsoft.Agents.AI.Abstractions/1.5.0": {
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1"
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2"
         },
         "runtime": {
           "lib/net10.0/Microsoft.Agents.AI.Abstractions.dll": {
@@ -156,7 +169,7 @@
         "dependencies": {
           "Microsoft.Agents.AI": "1.5.0",
           "Microsoft.Extensions.AI": "10.5.1",
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2",
           "Microsoft.Extensions.AI.Evaluation": "10.4.0",
           "Microsoft.Extensions.AI.OpenAI": "10.5.1",
           "Microsoft.Extensions.Compliance.Abstractions": "10.5.0",
@@ -180,7 +193,7 @@
           "Microsoft.Agents.AI": "1.5.0",
           "Microsoft.Agents.AI.Abstractions": "1.5.0",
           "Microsoft.Extensions.AI": "10.5.1",
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2",
           "Microsoft.Extensions.AI.Evaluation": "10.4.0",
           "Microsoft.Extensions.Compliance.Abstractions": "10.5.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.7",
@@ -207,7 +220,7 @@
       },
       "Microsoft.Extensions.AI/10.5.1": {
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2",
           "Microsoft.Extensions.Caching.Abstractions": "10.0.6",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.7",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.7",
@@ -220,17 +233,17 @@
           }
         }
       },
-      "Microsoft.Extensions.AI.Abstractions/10.5.1": {
+      "Microsoft.Extensions.AI.Abstractions/10.5.2": {
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll": {
             "assemblyVersion": "10.5.0.0",
-            "fileVersion": "10.500.126.25103"
+            "fileVersion": "10.500.226.25501"
           }
         }
       },
       "Microsoft.Extensions.AI.Evaluation/10.4.0": {
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1"
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2"
         },
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.AI.Evaluation.dll": {
@@ -241,7 +254,7 @@
       },
       "Microsoft.Extensions.AI.OpenAI/10.5.1": {
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2",
           "OpenAI": "2.10.0"
         },
         "runtime": {
@@ -644,7 +657,7 @@
       },
       "Microsoft.Extensions.VectorData.Abstractions/9.7.0": {
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.5.1"
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.VectorData.Abstractions.dll": {
@@ -817,6 +830,18 @@
           }
         }
       },
+      "ModelContextProtocol.Core/1.3.0": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.5.2",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.7"
+        },
+        "runtime": {
+          "lib/net10.0/ModelContextProtocol.Core.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -944,6 +969,9 @@
         }
       },
       "GenAiAgent.Core/1.0.0": {
+        "dependencies": {
+          "Anthropic": "12.24.1"
+        },
         "runtime": {
           "GenAiAgent.Core.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -971,6 +999,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Anthropic/12.24.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Fy0l4ZLEkWlmWFDPyRxjwfjzeZCZJkWbuV88HdCMKQYhHEFRqIBATcMUM224+//ouGOx8g//jfmgSsT5NA3GLQ==",
+      "path": "anthropic/12.24.1",
+      "hashPath": "anthropic.12.24.1.nupkg.sha512"
     },
     "Azure.AI.Extensions.OpenAI/2.0.0": {
       "type": "package",
@@ -1070,12 +1105,12 @@
       "path": "microsoft.extensions.ai/10.5.1",
       "hashPath": "microsoft.extensions.ai.10.5.1.nupkg.sha512"
     },
-    "Microsoft.Extensions.AI.Abstractions/10.5.1": {
+    "Microsoft.Extensions.AI.Abstractions/10.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nB0l3IlsVbNeUxsE7nZNb9GY8rP1OSeqpj0pseORPejt474HNKEauTWTLdSJPkSvPlRMxowZNMo6nyp7APAiSg==",
-      "path": "microsoft.extensions.ai.abstractions/10.5.1",
-      "hashPath": "microsoft.extensions.ai.abstractions.10.5.1.nupkg.sha512"
+      "sha512": "sha512-Ei+YWV9Ybnps7pR1dgjlG29gelXEwZkhLVAcWmKe6HvXS6LNBYgSdWiY3Hk9OZXYtK34rv/NtLWBQYQGOBQYPQ==",
+      "path": "microsoft.extensions.ai.abstractions/10.5.2",
+      "hashPath": "microsoft.extensions.ai.abstractions.10.5.2.nupkg.sha512"
     },
     "Microsoft.Extensions.AI.Evaluation/10.4.0": {
       "type": "package",
@@ -1356,6 +1391,13 @@
       "sha512": "sha512-+b8lT4cLLO/sBR2hjvE/qG6qrZG15h7/PBvnIrzTh4xDaAxdHUY6449rC+1pHzQUsBiCHZVbj+VMn+xS0sL7TA==",
       "path": "microsoft.ml.tokenizers/2.0.0",
       "hashPath": "microsoft.ml.tokenizers.2.0.0.nupkg.sha512"
+    },
+    "ModelContextProtocol.Core/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OWmdxDSwA7K9pNNg4t98MXNIssHG/wOQEr/G8pG5B7synDdw4MnmZ/IIVeb3yUdeznPqnDHvd3FBCK0jRk4IZQ==",
+      "path": "modelcontextprotocol.core/1.3.0",
+      "hashPath": "modelcontextprotocol.core.1.3.0.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",

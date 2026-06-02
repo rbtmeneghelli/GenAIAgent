@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenAiAgent.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05a6e4833793011e60179c4b601f323239e2f0d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f00064d991329b2dc3fa5e4d4304fea25efaf23e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenAiAgent.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenAiAgent.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
