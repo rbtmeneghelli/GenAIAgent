@@ -1,4 +1,4 @@
-﻿namespace GenAIAgent.Models;
+﻿namespace GenAiAgent.Core.Models;
 
 public class FeelingData
 {

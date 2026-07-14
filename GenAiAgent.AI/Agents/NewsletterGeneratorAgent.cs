@@ -1,16 +1,11 @@
 ﻿using System.Text.Json;
-using Microsoft.Agents.AI;
-using Microsoft.Extensions.AI;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using GenAiAgent.AI.Models;
 using GenAiAgent.AI.Providers.Abstractions;
-using GenAiAgent.Core;
 using GenAiAgent.Core.Agents.Abstractions;
 using GenAiAgent.Core.Enums;
 using GenAiAgent.Core.Models;
-using OpenAI;
-using OpenAI.Chat;
 
 namespace GenAiAgent.AI.Agents;
 

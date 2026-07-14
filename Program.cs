@@ -1,9 +1,9 @@
 ﻿using GenAiAgent.AI;
 using GenAiAgent.Core;
+using GenAiAgent.Core.Constants;
+using GenAiAgent.Core.Models;
 using GenAiAgent.Infra;
-using GenAIAgent;
-using GenAIAgent.Constants;
-using GenAIAgent.Models;
+using GenAiAgent.Infra.Factory;
 using GenAIAgent.Workers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,18 +42,19 @@ do
     Console.WriteLine("6 - Chamar um código de agente do azure AI foundry");
     Console.WriteLine("7 - Chamar um código de IA generativa da Anthropic similar ao (ChatGpt, Github Copilot, DeepSeek, Gemini e etc...)");
     Console.WriteLine("8 - Chamar um código para simular um ChatClient da Anthropic");
+    Console.WriteLine("9 - Chamar um código de multiagentes com orquestração manual");
 
     string? userChoice = Console.ReadLine();
 
     int.TryParse(userChoice, out int choice);
 
-    if (choice < 0 || choice > 8)
+    if (choice < 0 || choice > 9)
     {
         ConsoleAppExtension.ShowConsoleMessage(FixConstant.WRONG_CHOICE);
         continue;
     }
 
-    IGenAIFactory genAIFactory = new GenAIFactory();
+    IGenAIFactory genAIFactory = app.Services.GetRequiredService<IGenAIFactory>();
 
     switch (choice)
     {
@@ -96,6 +97,9 @@ do
             break;
         case 8:
             await genAIFactory.UseAnthropicMCP();
+            break;
+        case 9:
+            await genAIFactory.CreateAndUseMultiAgent(""" Criar uma API ASP.NET Core para cadastro de clientes utilizando EF Core e o SQLite Use EnsureCreated() para criar o banco """);
             break;
     }
 } while (runProgram);

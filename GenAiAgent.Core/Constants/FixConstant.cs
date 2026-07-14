@@ -1,4 +1,4 @@
-﻿namespace GenAIAgent.Constants;
+﻿namespace GenAiAgent.Core.Constants;
 
 public static class FixConstant
 {

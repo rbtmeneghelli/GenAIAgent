@@ -3,11 +3,14 @@ using Anthropic.Models.Messages;
 using Azure.AI.OpenAI;
 using Azure.AI.Projects;
 using Azure.Identity;
+using GenAiAgent.AI.MultiAgentManualOrchestrator;
 using GenAiAgent.Core;
-using GenAIAgent.Models;
+using GenAiAgent.Core.Models;
+using GenAIAgent;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
+using Microsoft.Extensions.Hosting;
 using Microsoft.ML;
 using ModelContextProtocol.Client;
 using OpenAI;
@@ -16,7 +19,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 
-namespace GenAIAgent;
+namespace GenAiAgent.Infra.Factory;
 
 /// <summary>
 /// Quando usar agentes de IA
@@ -31,6 +34,13 @@ namespace GenAIAgent;
 
 public class GenAIFactory : IGenAIFactory
 {
+    private readonly OrcherstratorAgent _OrcherstratorAgent;
+
+    public GenAIFactory(OrcherstratorAgent orcherstratorAgent)
+    {
+        _OrcherstratorAgent = orcherstratorAgent;
+    }
+
     public async Task CreateAgent()
     {
         var agent = new OpenAIClient(Configuration.OpenAi.ApiKey)
@@ -72,21 +82,18 @@ public class GenAIFactory : IGenAIFactory
         var session = await agent.CreateSessionAsync();
         var session2 = await agent2.CreateSessionAsync();
 
-        while (true)
-        {
-            Console.WriteLine("Faça uma pergunta:");
-            var prompt = Console.ReadLine();
-            var result = agent.RunAsync(prompt ?? string.Empty, session);
+        Console.WriteLine("Faça uma pergunta:");
+        var prompt = Console.ReadLine();
+        var result = agent.RunAsync(prompt ?? string.Empty, session);
 
-            Console.WriteLine("Resposta em português:");
-            Console.WriteLine(result.Result.Text);
+        Console.WriteLine("Resposta em português:");
+        Console.WriteLine(result.Result.Text);
 
-            var translatedResult = agent2.RunAsync(result.Result.Text, session2);
-            Console.WriteLine("Resposta em inglês:");
-            Console.WriteLine(translatedResult.Result.Text);
+        var translatedResult = agent2.RunAsync(result.Result.Text, session2);
+        Console.WriteLine("Resposta em inglês:");
+        Console.WriteLine(translatedResult.Result.Text);
 
-            Console.WriteLine("-------------------------------------------");
-        }
+        Console.WriteLine("-------------------------------------------");
     }
 
     public async Task CreateAgent_V2()
@@ -310,6 +317,16 @@ public class GenAIFactory : IGenAIFactory
         ChatOptions options = new() { Tools = [.. await learningServer.ListToolsAsync()] };
 
         Console.WriteLine(await chatClient.GetResponseAsync("Tell me about IChatClient", options));
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    public async Task CreateAndUseMultiAgent(string request)
+    {
+        await _OrcherstratorAgent.ExecuteAsync(request);
     }
 }
 

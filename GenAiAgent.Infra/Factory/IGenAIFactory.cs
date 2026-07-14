@@ -1,7 +1,7 @@
-﻿using GenAIAgent.Models;
+﻿using GenAiAgent.Core.Models;
 using OpenAI.Chat;
 
-namespace GenAIAgent;
+namespace GenAiAgent.Infra.Factory;
 
 public interface IGenAIFactory
 {
@@ -14,4 +14,5 @@ public interface IGenAIFactory
     Task<string> UseAzureAgent(ChatClient chatClient, string ask);
     Task UseAnthropicFromGenerateAI(string contentMessage, bool autoconfig = true, bool applyStream = true);
     Task UseAnthropicMCP();
+    Task CreateAndUseMultiAgent(string request);
 }

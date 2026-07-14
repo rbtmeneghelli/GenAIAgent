@@ -1,5 +1,7 @@
-﻿using GenAiAgent.Core.Repositories.Abstractions;
+﻿using GenAiAgent.AI.MultiAgentManualOrchestrator;
+using GenAiAgent.Core.Repositories.Abstractions;
 using GenAiAgent.Core.Services.Abstractions;
+using GenAiAgent.Infra.Factory;
 using GenAiAgent.Infra.Repositories;
 using GenAiAgent.Infra.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +14,12 @@ public static class DependencyInjection
     {
         services.AddScoped<INewsletterService, NewsletterService>();
         services.AddScoped<IEmailService, EmailService>();
-        
+        services.AddScoped<DeveloperAgent>();
+        services.AddScoped<PlannerAgent>();
+        services.AddScoped<ReviewerAgent>();
+        services.AddScoped<OrcherstratorAgent>();
+        services.AddTransient<IGenAIFactory, GenAIFactory>();
+
         return services;
     } 
     
