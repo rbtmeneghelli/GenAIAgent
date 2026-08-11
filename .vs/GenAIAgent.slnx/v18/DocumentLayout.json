@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Projetos\\GenAIAgent\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|f:\\projetos\\genaiagent\\genaiagent.infra\\factory\\genaifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB604303-764E-4078-9D62-9492BDED59DC}|GenAiAgent.Infra\\GenAiAgent.Infra.csproj|solutionrelative:genaiagent.infra\\factory\\genaifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|f:\\projetos\\genaiagent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0984A315-3B46-9E70-B08A-1EDF4AB12377}|GenAIAgent.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +43,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenAIFactory.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\Factory\\GenAIFactory.cs",
+              "RelativeDocumentMoniker": "GenAiAgent.Infra\\Factory\\GenAIFactory.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\GenAiAgent.Infra\\Factory\\GenAIFactory.cs",
+              "RelativeToolTip": "GenAiAgent.Infra\\Factory\\GenAIFactory.cs",
+              "ViewState": "AgIAAHkBAAAAAAAAAAAwwHgBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T20:02:58.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Projetos\\GenAIAgent\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\Projetos\\GenAIAgent\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T18:55:29.221Z",
+              "EditorCaption": ""
             }
           ]
         }

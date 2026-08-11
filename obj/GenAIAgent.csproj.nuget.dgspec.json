@@ -58,19 +58,19 @@
           "dependencies": {
             "Microsoft.Agents.AI.OpenAI": {
               "target": "Package",
-              "version": "[1.3.0, )"
+              "version": "[1.17.0, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[10.0.7, )"
+              "version": "[10.0.11, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[10.0.7, )"
+              "version": "[10.0.11, )"
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[10.0.7, )"
+              "version": "[10.0.11, )"
             }
           },
           "imports": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -417,7 +417,7 @@
           "dependencies": {
             "Anthropic": {
               "target": "Package",
-              "version": "[12.24.1, )"
+              "version": "[12.40.0, )"
             }
           },
           "imports": [
@@ -436,7 +436,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -772,9 +772,17 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.Agents.AI": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Microsoft.Extensions.AI": {
+              "target": "Package",
+              "version": "[10.8.3, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[10.0.10, )"
+              "version": "[10.0.11, )"
             }
           },
           "imports": [
@@ -793,7 +801,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1128,7 +1136,7 @@
           "dependencies": {
             "Anthropic": {
               "target": "Package",
-              "version": "[12.35.1, )"
+              "version": "[12.40.0, )"
             },
             "Azure.AI.OpenAI": {
               "target": "Package",
@@ -1140,19 +1148,23 @@
             },
             "Microsoft.Agents.AI.OpenAI": {
               "target": "Package",
-              "version": "[1.5.0, )"
+              "version": "[1.17.0, )"
             },
             "Microsoft.Agents.AI.Workflows": {
               "target": "Package",
-              "version": "[1.5.0, )"
+              "version": "[1.17.0, )"
+            },
+            "Microsoft.Extensions.AI": {
+              "target": "Package",
+              "version": "[10.8.3, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[10.0.7, )"
+              "version": "[10.0.11, )"
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[10.0.7, )"
+              "version": "[10.0.11, )"
             },
             "Microsoft.ML": {
               "target": "Package",
@@ -1160,7 +1172,7 @@
             },
             "ModelContextProtocol.Core": {
               "target": "Package",
-              "version": "[1.4.1, )"
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
@@ -1179,7 +1191,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -1745,5 +1745,5 @@
     }
   },
   "type": "object",
-  "SourceSegments": "C:\\Users\\Master\\.nuget\\packages\\system.clientmodel\\1.10.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\openai\\2.10.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.core\\1.53.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.ai.projects.agents\\2.0.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.ai.projects\\2.0.1\\ConfigurationSchema.json"
+  "SourceSegments": "C:\\Users\\Master\\.nuget\\packages\\system.clientmodel\\1.14.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\openai\\2.10.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.core\\1.53.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.ai.projects.agents\\2.0.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.ai.projects\\2.0.1\\ConfigurationSchema.json"
 }

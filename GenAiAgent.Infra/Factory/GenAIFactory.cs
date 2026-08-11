@@ -1,8 +1,10 @@
 ﻿using Anthropic;
 using Anthropic.Models.Messages;
+using Azure;
 using Azure.AI.OpenAI;
 using Azure.AI.Projects;
 using Azure.Identity;
+using GenAiAgent.AI.MultiAgentApproveCredit;
 using GenAiAgent.AI.MultiAgentManualOrchestrator;
 using GenAiAgent.Core;
 using GenAiAgent.Core.Models;
@@ -34,11 +36,30 @@ namespace GenAiAgent.Infra.Factory;
 
 public class GenAIFactory : IGenAIFactory
 {
+    private readonly IChatClient _chatClient;
     private readonly OrcherstratorAgent _OrcherstratorAgent;
+    private readonly AI.MultiAgentApproveCredit.PlannerAgent _planner;
+    private readonly CreditAgent _credit;
+    private readonly ComplianceAgent _compliance;
+    private readonly AI.MultiAgentApproveCredit.ReviewerAgent _reviewer;
+    private readonly ResponseAgent _response;
 
-    public GenAIFactory(OrcherstratorAgent orcherstratorAgent)
+    public GenAIFactory(
+        IChatClient chatClient,
+        OrcherstratorAgent orcherstratorAgent,
+        AI.MultiAgentApproveCredit.PlannerAgent planner,
+        CreditAgent credit,
+        ComplianceAgent compliance,
+        AI.MultiAgentApproveCredit.ReviewerAgent reviewer,
+        ResponseAgent response)
     {
+        _chatClient = chatClient;
         _OrcherstratorAgent = orcherstratorAgent;
+        _planner = planner;
+        _credit = credit;
+        _compliance = compliance;
+        _reviewer = reviewer;
+        _response = response;
     }
 
     public async Task CreateAgent()
@@ -327,6 +348,43 @@ public class GenAIFactory : IGenAIFactory
     public async Task CreateAndUseMultiAgent(string request)
     {
         await _OrcherstratorAgent.ExecuteAsync(request);
+    }
+
+    public async Task CreateMultiAgentToApproveCredit(string prompt)
+    {
+        var planner = _planner.Create(_chatClient).BindAsExecutor();
+        var credit = _credit.Create(_chatClient).BindAsExecutor();
+        var compliance = _compliance.Create(_chatClient).BindAsExecutor();
+        var reviewer = _reviewer.Create(_chatClient).BindAsExecutor();
+        var response = _response.Create(_chatClient).BindAsExecutor();
+
+        var workflow = new WorkflowBuilder(planner)
+            .AddFanOutEdge(
+                planner,
+                new[]
+                {
+                credit,
+                compliance
+                })
+            .AddFanInBarrierEdge(
+                new[]
+                {
+                credit,
+                compliance
+                },
+                reviewer)
+            .AddEdge(reviewer, response)
+            .Build();
+
+        var result = await InProcessExecution.RunAsync(workflow,prompt);
+
+        foreach (var evt in result.NewEvents)
+        {
+            if (evt is WorkflowOutputEvent output)
+            {
+                Console.WriteLine(output.Data);
+            }
+        }
     }
 }
 

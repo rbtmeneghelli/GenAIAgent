@@ -8,20 +8,20 @@
     ".NETCoreApp,Version=v10.0": {
       "GenAiAgent.Core/1.0.0": {
         "dependencies": {
-          "Anthropic": "12.24.1"
+          "Anthropic": "12.40.0"
         },
         "runtime": {
           "GenAiAgent.Core.dll": {}
         }
       },
-      "Anthropic/12.24.1": {
+      "Anthropic/12.40.0": {
         "dependencies": {
           "Microsoft.Extensions.AI.Abstractions": "10.5.1"
         },
         "runtime": {
           "lib/net9.0/Anthropic.dll": {
-            "assemblyVersion": "12.24.1.0",
-            "fileVersion": "12.24.1.0"
+            "assemblyVersion": "12.40.0.0",
+            "fileVersion": "12.40.0.0"
           }
         }
       },
@@ -41,12 +41,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Anthropic/12.24.1": {
+    "Anthropic/12.40.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Fy0l4ZLEkWlmWFDPyRxjwfjzeZCZJkWbuV88HdCMKQYhHEFRqIBATcMUM224+//ouGOx8g//jfmgSsT5NA3GLQ==",
-      "path": "anthropic/12.24.1",
-      "hashPath": "anthropic.12.24.1.nupkg.sha512"
+      "sha512": "sha512-5V9JZxH4E8vuGjpP9BkfkrsRXLSs2sTacHqpcAquKiDW0Kt+f5oFUi3TFgrecossVa47WW6WnHl9DdsZ5i/1Jw==",
+      "path": "anthropic/12.40.0",
+      "hashPath": "anthropic.12.40.0.nupkg.sha512"
     },
     "Microsoft.Extensions.AI.Abstractions/10.5.1": {
       "type": "package",

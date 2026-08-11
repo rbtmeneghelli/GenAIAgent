@@ -15,4 +15,5 @@ public interface IGenAIFactory
     Task UseAnthropicFromGenerateAI(string contentMessage, bool autoconfig = true, bool applyStream = true);
     Task UseAnthropicMCP();
     Task CreateAndUseMultiAgent(string request);
+    Task CreateMultiAgentToApproveCredit(string prompt);
 }

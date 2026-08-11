@@ -1,17 +1,21 @@
 ﻿using GenAiAgent.AI;
+using GenAiAgent.AI.MultiAgentApproveCredit;
+using GenAiAgent.AI.MultiAgentApproveCredit.Tools;
 using GenAiAgent.Core;
 using GenAiAgent.Core.Constants;
 using GenAiAgent.Core.Models;
 using GenAiAgent.Infra;
 using GenAiAgent.Infra.Factory;
 using GenAIAgent.Workers;
+using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OpenAI.Chat;
 
 bool runProgram = true;
 
-var builder = Host.CreateApplicationBuilder(args);
+var builder = Host.CreateApplicationBuilder(args);builder.Configuration.AddUserSecrets<Program>();
 
 builder.Services.AddServices();
 builder.Services.AddRepositories();
@@ -19,11 +23,20 @@ builder.Services.AddAgents();
 
 builder.Services.AddHostedService<NewsletterWorker>();
 
-builder.Configuration.AddUserSecrets<Program>();
-
 var app = builder.Build();
 
 Configuration.OpenAi.ApiKey = builder.Configuration["OpenAi:ApiKey"] ?? throw new Exception("OpenAI API Key not found in configuration");
+
+//// Configura o ChatClient
+var chatClient = new ChatClient(model: "gpt-4.1", apiKey: Configuration.OpenAi.ApiKey);
+builder.Services.AddChatClient(chatClient.AsIChatClient());
+
+//// Registra os Agents
+builder.Services.AddSingleton<PlannerAgent>();
+builder.Services.AddSingleton<CreditAgent>();
+builder.Services.AddSingleton<ComplianceAgent>();
+builder.Services.AddSingleton<ReviewerAgent>();
+builder.Services.AddSingleton<ResponseAgent>();
 
 var environment = app.Services.GetRequiredService<IHostEnvironment>();
 Configuration.RootPath = environment.ContentRootPath;
@@ -43,12 +56,13 @@ do
     Console.WriteLine("7 - Chamar um código de IA generativa da Anthropic similar ao (ChatGpt, Github Copilot, DeepSeek, Gemini e etc...)");
     Console.WriteLine("8 - Chamar um código para simular um ChatClient da Anthropic");
     Console.WriteLine("9 - Chamar um código de multiagentes com orquestração manual");
+    Console.WriteLine("10 - Chamar um código de multiagentes para simular uma aprovação de credito");
 
     string? userChoice = Console.ReadLine();
 
     int.TryParse(userChoice, out int choice);
 
-    if (choice < 0 || choice > 9)
+    if (choice < 0 || choice > 10)
     {
         ConsoleAppExtension.ShowConsoleMessage(FixConstant.WRONG_CHOICE);
         continue;
@@ -100,6 +114,11 @@ do
             break;
         case 9:
             await genAIFactory.CreateAndUseMultiAgent(""" Criar uma API ASP.NET Core para cadastro de clientes utilizando EF Core e o SQLite Use EnsureCreated() para criar o banco """);
+            break;
+        case 10:
+            Console.WriteLine("Digite o prompt para o multiagente de aprovação de crédito");
+            var creditPrompt = Console.ReadLine();
+            await genAIFactory.CreateMultiAgentToApproveCredit(creditPrompt ?? "Avalie o pedido de crédito do cliente João.");
             break;
     }
 } while (runProgram);
