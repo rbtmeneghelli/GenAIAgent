@@ -11,3 +11,17 @@ F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.dll
 F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\refint\GenAiAgent.Core.dll
 F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.pdb
 F:\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\ref\GenAiAgent.Core.dll
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\bin\Debug\net10.0\GenAiAgent.Core.deps.json
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\bin\Debug\net10.0\GenAiAgent.Core.dll
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\bin\Debug\net10.0\GenAiAgent.Core.pdb
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.csproj.AssemblyReference.cache
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.AssemblyInfoInputs.cache
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.AssemblyInfo.cs
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.csproj.CoreCompileInputs.cache
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.sourcelink.json
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.dll
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\refint\GenAiAgent.Core.dll
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAgent.Core.pdb
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\ref\GenAiAgent.Core.dll
+C:\Users\r.grigoragi\Documents\Projetos\GenAIAgent\GenAiAgent.Core\obj\Debug\net10.0\GenAiAge.031553FA.Up2Date

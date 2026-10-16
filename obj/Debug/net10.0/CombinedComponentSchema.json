@@ -1424,20 +1424,6 @@
         }
       },
       "additionalProperties": false
-    },
-    "agentAdministrationClientOptions": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/azureOptions"
-        }
-      ]
-    },
-    "aIProjectClientOptions": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/azureOptions"
-        }
-      ]
     }
   },
   "properties": {
@@ -1703,47 +1689,10 @@
             "$ref": "#/definitions/azureOptions"
           }
         },
-        "additionalProperties": true,
-        "description": "Configuration for a named client instance."
-      },
-      "properties": {
-        "AgentAdministrationClient": {
-          "type": "object",
-          "description": "Configuration for AgentAdministrationClient.",
-          "properties": {
-            "Endpoint": {
-              "type": "string",
-              "format": "uri",
-              "description": "Gets or sets the Endpoint."
-            },
-            "Credential": {
-              "$ref": "#/definitions/credential"
-            },
-            "Options": {
-              "$ref": "#/definitions/agentAdministrationClientOptions"
-            }
-          }
-        },
-        "AIProjectClient": {
-          "type": "object",
-          "description": "Configuration for AIProjectClient.",
-          "properties": {
-            "Endpoint": {
-              "type": "string",
-              "format": "uri",
-              "description": "Gets or sets the Endpoint."
-            },
-            "Credential": {
-              "$ref": "#/definitions/credential"
-            },
-            "Options": {
-              "$ref": "#/definitions/aIProjectClientOptions"
-            }
-          }
-        }
+        "additionalProperties": true
       }
     }
   },
   "type": "object",
-  "SourceSegments": "C:\\Users\\Master\\.nuget\\packages\\system.clientmodel\\1.14.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\openai\\2.10.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.core\\1.53.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.ai.projects.agents\\2.0.0\\ConfigurationSchema.json;C:\\Users\\Master\\.nuget\\packages\\azure.ai.projects\\2.0.1\\ConfigurationSchema.json"
+  "SourceSegments": "C:\\Users\\r.grigoragi\\.nuget\\packages\\system.clientmodel\\1.15.0\\ConfigurationSchema.json;C:\\Users\\r.grigoragi\\.nuget\\packages\\openai\\2.14.0\\ConfigurationSchema.json;C:\\Users\\r.grigoragi\\.nuget\\packages\\azure.core\\1.53.0\\ConfigurationSchema.json"
 }

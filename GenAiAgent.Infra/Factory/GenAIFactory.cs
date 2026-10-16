@@ -13,6 +13,7 @@ using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.ML;
 using ModelContextProtocol.Client;
 using OpenAI;
@@ -43,6 +44,8 @@ public class GenAIFactory : IGenAIFactory
     private readonly ComplianceAgent _compliance;
     private readonly AI.MultiAgentApproveCredit.ReviewerAgent _reviewer;
     private readonly ResponseAgent _response;
+    private readonly ILoggerFactory _loggerFactory;
+
 
     public GenAIFactory(
         IChatClient chatClient,
@@ -51,7 +54,8 @@ public class GenAIFactory : IGenAIFactory
         CreditAgent credit,
         ComplianceAgent compliance,
         AI.MultiAgentApproveCredit.ReviewerAgent reviewer,
-        ResponseAgent response)
+        ResponseAgent response,
+        ILoggerFactory loggerFactory)
     {
         _chatClient = chatClient;
         _OrcherstratorAgent = orcherstratorAgent;
@@ -60,6 +64,7 @@ public class GenAIFactory : IGenAIFactory
         _compliance = compliance;
         _reviewer = reviewer;
         _response = response;
+        _loggerFactory = loggerFactory;
     }
 
     public async Task CreateAgent()
@@ -376,7 +381,7 @@ public class GenAIFactory : IGenAIFactory
             .AddEdge(reviewer, response)
             .Build();
 
-        var result = await InProcessExecution.RunAsync(workflow,prompt);
+        var result = await InProcessExecution.RunAsync(workflow, prompt);
 
         foreach (var evt in result.NewEvents)
         {
@@ -385,6 +390,25 @@ public class GenAIFactory : IGenAIFactory
                 Console.WriteLine(output.Data);
             }
         }
+    }
+
+    public async Task UseChatClientOpenTelemetry(string prompt)
+    {
+        IChatClient providerClient = new ChatClient("gpt-4o-mini", Configuration.OpenAi.ApiKey).AsIChatClient();
+
+        IChatClient chatClient = new ChatClientBuilder(providerClient)
+                                 .UseOpenTelemetry(
+                                     _loggerFactory,
+                                     sourceName: "Telemedicina.AI",
+                                     configure: telemetry =>
+                                     {
+                                         telemetry.EnableSensitiveData = false;
+                                     })
+                                 .Build();
+
+        var answer = await chatClient.GetResponseAsync(prompt);
+
+        Console.WriteLine(answer.Text ?? string.Empty);
     }
 }
 

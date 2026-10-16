@@ -16,4 +16,5 @@ public interface IGenAIFactory
     Task UseAnthropicMCP();
     Task CreateAndUseMultiAgent(string request);
     Task CreateMultiAgentToApproveCredit(string prompt);
+    Task UseChatClientOpenTelemetry(string prompt);
 }

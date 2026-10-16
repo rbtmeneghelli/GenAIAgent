@@ -1,6 +1,5 @@
 ﻿using GenAiAgent.AI;
 using GenAiAgent.AI.MultiAgentApproveCredit;
-using GenAiAgent.AI.MultiAgentApproveCredit.Tools;
 using GenAiAgent.Core;
 using GenAiAgent.Core.Constants;
 using GenAiAgent.Core.Models;
@@ -15,7 +14,7 @@ using OpenAI.Chat;
 
 bool runProgram = true;
 
-var builder = Host.CreateApplicationBuilder(args);builder.Configuration.AddUserSecrets<Program>();
+var builder = Host.CreateApplicationBuilder(args); builder.Configuration.AddUserSecrets<Program>();
 
 builder.Services.AddServices();
 builder.Services.AddRepositories();
@@ -57,12 +56,13 @@ do
     Console.WriteLine("8 - Chamar um código para simular um ChatClient da Anthropic");
     Console.WriteLine("9 - Chamar um código de multiagentes com orquestração manual");
     Console.WriteLine("10 - Chamar um código de multiagentes para simular uma aprovação de credito");
+    Console.WriteLine("11 - Chamar um código de IA com telemetria");
 
     string? userChoice = Console.ReadLine();
 
     int.TryParse(userChoice, out int choice);
 
-    if (choice < 0 || choice > 10)
+    if (choice < 0 || choice > 11)
     {
         ConsoleAppExtension.ShowConsoleMessage(FixConstant.WRONG_CHOICE);
         continue;
@@ -119,6 +119,11 @@ do
             Console.WriteLine("Digite o prompt para o multiagente de aprovação de crédito");
             var creditPrompt = Console.ReadLine();
             await genAIFactory.CreateMultiAgentToApproveCredit(creditPrompt ?? "Avalie o pedido de crédito do cliente João.");
+            break;
+        case 11:
+            Console.WriteLine("Digite uma pergunta relacionada a telemedicina para a AI com telemetria");
+            var prompt = Console.ReadLine();
+            await genAIFactory.UseChatClientOpenTelemetry(prompt);
             break;
     }
 } while (runProgram);

@@ -5,6 +5,7 @@ using GenAiAgent.Infra.Factory;
 using GenAiAgent.Infra.Repositories;
 using GenAiAgent.Infra.Services;
 using Microsoft.Extensions.DependencyInjection;
+using OpenTelemetry.Trace;
 
 namespace GenAiAgent.Infra;
 
@@ -21,13 +22,28 @@ public static class DependencyInjection
         services.AddTransient<IGenAIFactory, GenAIFactory>();
 
         return services;
-    } 
-    
+    }
+
     public static IServiceCollection AddRepositories(this IServiceCollection services)
     {
         services.AddScoped<IArticleRepository, ArticleRepository>();
         services.AddScoped<ISubscriberRepository, SubscriberRepository>();
-        
+
+        return services;
+    }
+
+    public static IServiceCollection AddTelemetry(this IServiceCollection services)
+    {
+        services.AddOpenTelemetry()
+            .WithTracing(tracing =>
+            {
+                tracing
+                    .AddSource("Telemedicina.AI")
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddConsoleExporter();
+            });
+
         return services;
     }
 }
